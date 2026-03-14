@@ -18,3 +18,18 @@ Add it to your server and get **smart, up-to-date answers** in any channel.
 ---
 
 ### 📁 Project Structure
+
+
+---
+
+### ⚙️ Setup
+
+1. **Clone this repo**
+```bash
+git clone https://github.com/KrAtulHub/AI-Discord-Assistance-ChatBot.git
+cd AI-Discord-Assistance-ChatBot
+
+DISCORD_API_KEY=YOUR_DISCORD_BOT_TOKEN
+OPENROUTER_API_KEY=YOUR_OPENROUTER_KEY
+TAVILY_API_KEY=YOUR_TAVILY_KEY
+
