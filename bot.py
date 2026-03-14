@@ -6,6 +6,7 @@ import time
 from datetime import datetime
 
 import requests
+from aiohttp import web
 from discord.ext import commands
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -225,4 +226,25 @@ async def on_message(message: discord.Message):
     await handle_ai_question(message.channel, message.author, question, use_web=False)
 
 
-bot.run(DISCORD_TOKEN)
+async def health_check(request: web.Request) -> web.Response:
+    return web.Response(text="OK")
+
+
+async def start_web_server() -> None:
+    app = web.Application()
+    app.router.add_get("/", health_check)
+    app.router.add_get("/health", health_check)
+    port = int(os.getenv("PORT", 8080))
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, "0.0.0.0", port)
+    await site.start()
+    log.info("Health check server started on port %d", port)
+
+
+async def main() -> None:
+    await start_web_server()
+    await bot.start(DISCORD_TOKEN)
+
+
+asyncio.run(main())
