@@ -3,7 +3,7 @@
 Intelligent Discord bot powered by **OpenRouter (free models)** and **Tavily** web search.  
 Add it to your server and get **smart, up-to-date answers** in any channel.  
 
-[![Add to Discord](https://img.shields.io/badge/➕-Invite%20Bot-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/oauth2/authorize?client_id=1482288105863118929&scope=bot&permissions=68608)  
+[![Add to Discord](https://img.shields.io/badge/➕-Invite%20Bot-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/channels/1482285214557409282/1482344434380177573)  
 
 ---
 
